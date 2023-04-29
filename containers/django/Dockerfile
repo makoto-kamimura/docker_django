@@ -14,7 +14,7 @@ RUN pip install --upgrade pip
 # pip install -r requirements.txtを実行
 RUN pip install -r requirements.txt
 # ソースコードをコンテナにコピー
-COPY . /code/
+COPY ./app/ /code/
 # entrypoint.shに実行権限を付与
 RUN chmod 755 entrypoint.sh
 RUN ls -la

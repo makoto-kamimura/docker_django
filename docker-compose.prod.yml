@@ -26,8 +26,8 @@ services:
       dockerfile: containers/django/Dockerfile
     platform: linux/x86_64
     volumes:
-      - .:/code
-      - ./static:/static
+      - ./app:/code
+      - ./app/static:/static
     # 8000番ポートをNginx側が接続できるよう開く
     expose:
       - "8000"
@@ -51,7 +51,7 @@ services:
     # ボリュームを指定
     # ローカルの/staticをコンテナの/staticにマウントする
     volumes:
-      - ./static:/static
+      - ./app/static:/static
     # ローカルの80番ボートをコンテナの80番ポートとつなぐ
     ports:
       - "80:80"
