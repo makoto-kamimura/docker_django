@@ -4,7 +4,10 @@
 * prod
 docker-compose -f docker-compose.prod.yml run app django-admin startproject django_project .
 * dev
-docker-compose -f docker-compose.yml run app django-admin startproject djangopj .
+docker-compose -f docker-compose.yml run app django-admin startproject django_project .
+
+# setting.py
+* mysql
 
 # 
 * prod
