@@ -52,7 +52,8 @@ services:
     ports:
       - "8000:8000"
     # シェルスクリプトを実行
-    command: sh -c "/code/entrypoint.sh"
+    command: > 
+      sh -c "chmod 777 /code/entrypoint.sh;/code/entrypoint.sh"
     # 環境変数を.envを使って設定
     env_file:
       - .env
