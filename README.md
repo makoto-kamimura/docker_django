@@ -64,3 +64,8 @@ docker-compose stop && docker-compose -f docker-compose.prod.yml build && docker
 docker-compose stop && docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up -d
 
 https://qiita.com/shun198/items/f6864ef381ed658b5aba
+
+* docker exec -it "app_container_id" bash
+python manage.py startapp analysis
+python manage.py makemigrations
+python manage.py migrate
