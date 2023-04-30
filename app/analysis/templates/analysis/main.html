@@ -1,1 +1,18 @@
-hello django !
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!--  plotly JS Files  -->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+</head>
+
+<body>
+   {% autoescape off %}
+   {{ graph }}　
+   {% endautoescape %}
+</body>
+
+</html>
