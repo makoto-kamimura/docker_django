@@ -46,8 +46,8 @@ services:
     # ローカルのカレントディレクトリをコンテナの/codeにマウントする
     # ローカルの/staticをコンテナの/staticにマウントする
     volumes:
-      - .:/code
-      - ./static:/static
+      - ./app:/code
+      - ./app/static:/static
     # ローカルの8000番ポートとコンテナの8000番ポートをつなぐ
     ports:
       - "8000:8000"

@@ -59,8 +59,8 @@ STATIC_URL = "/static/"
 
 # 
 * prod
-docker-compose -f docker-compose.prod.yml build && docker-compose -f docker-compose.prod.yml up -d
+docker-compose stop && docker-compose -f docker-compose.prod.yml build && docker-compose -f docker-compose.prod.yml up -d
 * dev
-docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up -d
+docker-compose stop && docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up -d
 
 https://qiita.com/shun198/items/f6864ef381ed658b5aba
