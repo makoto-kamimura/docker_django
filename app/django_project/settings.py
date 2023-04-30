@@ -51,6 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # analysis
     'analysis.apps.AnalysisConfig', 
+    # chatbot
+    'chatbot.apps.ChatbotConfig', 
+    # 'accounts.apps.AccountsConfig',
+    # 
+    # 'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [

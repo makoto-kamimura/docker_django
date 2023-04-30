@@ -8,3 +8,5 @@ gunicorn>=19.9.0,<20.0
 pandas==2.0.1
 # graph
 plotly==5.14.1
+# 辞書内包の形態素解析器
+Janome==0.4.2

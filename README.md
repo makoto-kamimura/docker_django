@@ -67,5 +67,16 @@ https://qiita.com/shun198/items/f6864ef381ed658b5aba
 
 * docker exec -it "app_container_id" bash
 python manage.py startapp analysis
+* * 
 python manage.py makemigrations
 python manage.py migrate
+
+
+
+* docker exec -it "app_container_id" bash
+python manage.py startapp chatbot
+* * 
+python manage.py makemigrations
+python manage.py migrate
+
+https://qiita.com/tky2202026/items/f852461852de18ca92ff
