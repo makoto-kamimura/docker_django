@@ -7,7 +7,7 @@ docker-compose -f docker-compose.prod.yml run app django-admin startproject djan
 # setting.py
 * mysql
 
-'''
+```
 from pathlib import Path
 # osのモジュールをインポート
 import os
@@ -25,8 +25,6 @@ DEBUG = os.environ.get("DEBUG") == "True"
 
 # ALLOWED_HOSTSを.envから取得
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-
-# [・・・]
 
 # MySQLのパラメータを.envから取得
 DATABASES = {
@@ -50,7 +48,7 @@ TIME_ZONE = "Asia/Tokyo"
 # Djangoの管理者画面にHTML、CSS、Javascriptが適用されます
 STATIC_ROOT = "/static/"
 STATIC_URL = "/static/"
-'''
+```
 
 # 
 * prod
