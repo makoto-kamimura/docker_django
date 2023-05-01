@@ -1,14 +1,13 @@
 # docker_django
  
-# new
+# new_project
 * prod
 docker-compose -f docker-compose.prod.yml run app django-admin startproject django_project .
-* dev
-docker-compose -f docker-compose.yml run app django-admin startproject django_project .
 
 # setting.py
 * mysql
-###############################################################################################
+
+'''
 from pathlib import Path
 # osのモジュールをインポート
 import os
@@ -42,20 +41,16 @@ DATABASES = {
     }
 }
 
-# [・・・]
-
 # 言語を日本語に設定
 LANGUAGE_CODE = "ja"
 # タイムゾーンをAsia/Tokyoに設定
 TIME_ZONE = "Asia/Tokyo"
 
-# [・・・]
-
 # STATIC_ROOTを設定
 # Djangoの管理者画面にHTML、CSS、Javascriptが適用されます
 STATIC_ROOT = "/static/"
 STATIC_URL = "/static/"
-###############################################################################################
+'''
 
 # 
 * prod
@@ -63,8 +58,10 @@ docker-compose stop && docker-compose -f docker-compose.prod.yml build && docker
 * dev
 docker-compose stop && docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up -d
 
+# reference
 https://qiita.com/shun198/items/f6864ef381ed658b5aba
 
+# new_proogram
 * docker exec -it "app_container_id" bash
 python manage.py startapp analysis
 * * 
@@ -79,4 +76,5 @@ python manage.py startapp chatbot
 python manage.py makemigrations
 python manage.py migrate
 
+# reference
 https://qiita.com/tky2202026/items/f852461852de18ca92ff
