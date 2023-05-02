@@ -50,29 +50,37 @@ STATIC_ROOT = "/static/"
 STATIC_URL = "/static/"
 ```
 
-# 
+# createsuperuser
+docker exec -it "db_container_id" bash
+```
+python manage.py createsuperuser
+Username (leave blank to use 'user1'): admin
+Email address: admin@email.com
+Password: # パスワードを入力
+Password (again): 
+This password is too common. # パスワードが単純過ぎる場合はエラー発生
+Password: 
+Password (again): 
+Superuser created successfully.
+```
+
+# DB migrate
+python manage.py makemigrations
+python manage.py migrate
+
+# deploy
 * prod
 docker-compose stop && docker-compose -f docker-compose.prod.yml build && docker-compose -f docker-compose.prod.yml up -d
 * dev
 docker-compose stop && docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up -d
 
-# reference
-https://qiita.com/shun198/items/f6864ef381ed658b5aba
-
 # new_proogram
 * docker exec -it "app_container_id" bash
 python manage.py startapp analysis
-* * 
-python manage.py makemigrations
-python manage.py migrate
-
-
 
 * docker exec -it "app_container_id" bash
 python manage.py startapp chatbot
-* * 
-python manage.py makemigrations
-python manage.py migrate
 
 # reference
+https://qiita.com/shun198/items/f6864ef381ed658b5aba
 https://qiita.com/tky2202026/items/f852461852de18ca92ff
