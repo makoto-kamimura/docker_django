@@ -2,7 +2,7 @@ import logging
 
 from django.shortcuts import render
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import My_chat_botForm
 from .models import Chat
 from django.views.generic import FormView
@@ -12,7 +12,9 @@ from .my_chat_bot import MyChatBot
 logger = logging.getLogger(__name__)
 
 #my_chat_bot
-class My_chat_botView(LoginRequiredMixin, FormView):
+# class My_chat_botView(LoginRequiredMixin, FormView):
+class My_chat_botView(FormView):
+
     template_name = "my_chat_bot.html"
     form_class = My_chat_botForm
     success_url = '/chatbot/'

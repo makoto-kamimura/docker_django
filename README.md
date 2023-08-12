@@ -84,3 +84,6 @@ python manage.py startapp chatbot
 # reference
 https://qiita.com/shun198/items/f6864ef381ed658b5aba
 https://qiita.com/tky2202026/items/f852461852de18ca92ff
+
+# superuser
+spuser
