@@ -11,6 +11,12 @@ WORKDIR /code
 COPY requirements.txt /code/
 # コンテナ内でpipをアップグレード
 RUN pip install --upgrade pip
+
+# 為替レート取得ライブラリ
+RUN pip install pandas-datareader
+# yahoo_finance_api2
+RUN pip install yahoo_finance_api2
+
 # pip install -r requirements.txtを実行
 RUN pip install -r requirements.txt
 # ソースコードをコンテナにコピー
